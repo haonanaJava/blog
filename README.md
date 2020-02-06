@@ -1,6 +1,8 @@
 # 个人博客
 this is my personal blog by java language and spring boot framework
 ## 用到的技术
+整个项目使用的是Maven来构建的
+
 个人博客系统使用的前端UI框架是Semantic UI
 
 富文本编辑器使用的是editor.md
