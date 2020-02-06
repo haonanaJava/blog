@@ -1,0 +1,25 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/blog?useSSL=false&serverTimezone=UTC&useUnicode=true&characterEncoding=UTF-8
+    username: root
+    password: 123456
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    open-in-view: false
+    properties:
+      hibernate:
+        enable_lazy_load_no_trans: true
+  thymeleaf:
+    cache: false
+    check-template: true
+logging:
+  level:
+    root: info
+    com.heyutang.blog: debug
+  file:
+    name: log/blog-dev.log
+#server:
+#  address: 192.168.0.104
