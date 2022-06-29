@@ -4,9 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/semantic-ui/2.2.4/semantic.min.css" >
-    <link rel="stylesheet" href="../static/css/me.css"  th:href="@{/css/me.css}">
-    <link rel="stylesheet" href="../../static/lib/editormd/css/editormd.min.css" th:href="@{/lib/editormd/css/editormd.min.css}" >
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,700;1,100;1,300;1,400&display=swap"
+          rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/semantic-ui/2.2.4/semantic.min.css">
+    <link rel="stylesheet" href="../static/css/me.css" th:href="@{/css/me.css}">
+    <link rel="stylesheet" href="../../static/lib/editormd/css/editormd.min.css"
+          th:href="@{/lib/editormd/css/editormd.min.css}">
     <link rel="stylesheet" href="../static/css/style.css" th:href="@{/css/style.css}">
     <title th:replace="${title}">博客详情</title>
 </head>
@@ -17,14 +22,18 @@
     <div class="ui container">
         <div class="ui inverted secondary menu">
             <h2 class="ui teal header item">管理后台</h2>
-            <a href="#" th:href="@{/admin/blogs}" class="item" th:classappend="${n==1} ? 'active'"><i class="home icon"></i>博客</a>
-            <a href="#" th:href="@{/admin/types}" class="item" th:classappend="${n==2} ? 'active'"><i class="idea icon"></i>分类</a>
-            <a href="#" th:href="@{/admin/tags}" class="item" th:classappend="${n==3} ? 'active'"><i class="tags icon"></i>标签</a>
+            <a href="#" th:href="@{/admin/blogs}" class="item" th:classappend="${n==1} ? 'active'"><i
+                    class="home icon"></i>博客</a>
+            <a href="#" th:href="@{/admin/types}" class="item" th:classappend="${n==2} ? 'active'"><i
+                    class="idea icon"></i>分类</a>
+            <a href="#" th:href="@{/admin/tags}" class="item" th:classappend="${n==3} ? 'active'"><i
+                    class="tags icon"></i>标签</a>
             <a href="#" th:href="@{/}" class="item" th:classappend="${n==4} ? 'active'"><i class="home icon"></i>主页</a>
             <div class="right menu">
                 <div class="ui dropdown item">
                     <div class="text">
-                        <img src="../../static/images/wechat.jpg" alt="" class="ui avatar image" th:src="@{${session.user.avatar}}">
+                        <img src="../../static/images/wechat.jpg" alt="" class="ui avatar image"
+                             th:src="@{${session.user.avatar}}">
                         <span th:text="${session.user.nickname}">何育堂</span>
                     </div>
                     <i class="icon dropdown"></i>
@@ -35,13 +44,15 @@
     </div>
 </nav>
 <!-- 底部footer -->
-<footer th:fragment="footer" style="width: 100%" class="ui inverted vertical segment m-padded-tb-massive">
+<footer th:fragment="footer" style="width: 100%;position: absolute;bottom: 0;left: 0;"
+        class="ui inverted vertical segment m-padded-tb-massive">
     <div class="ui center aligned container">
         <div class="ui inverted divided grid">
             <div class="three wide column">
                 <div class="ui inverted link list">
                     <div class="item">
-                        <img src="../static/images/wechat.jpg" th:src="@{/images/wechat.jpg}" class="ui rounded image" alt="" style="width: 110px;">
+                        <img src="../static/images/wechat.jpg" th:src="@{/images/wechat.jpg}" class="ui rounded image"
+                             alt="" style="width: 110px;">
                     </div>
                 </div>
             </div>

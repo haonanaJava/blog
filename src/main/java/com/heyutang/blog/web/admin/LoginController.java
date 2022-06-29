@@ -35,7 +35,8 @@ public class LoginController {
                         HttpSession session,
                         RedirectAttributes attributes) {
         User user = userService.checkUser(username, password);
-
+        if ( session.getAttribute("user") != null )return "admin/admin";
+        if (codeKey == null || codeStr == null) return "redirect:/admin";
         if (user != null && verifyCodes.get(codeKey).equalsIgnoreCase(codeStr)) {
             System.out.println("verify success");
             user.setPassword(null);

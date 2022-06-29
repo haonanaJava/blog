@@ -1,3 +1,14 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+.message{
+    top: 0 !important;
+    left: 0 !important;
+}
 
 .upload-container {
     min-width: 30%;
@@ -51,7 +62,7 @@
     border-radius: 4px;
 }
 
-.message{
+.fileUpload-message {
     position: absolute;
     top: 80px;
     left: 45%;

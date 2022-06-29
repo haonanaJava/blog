@@ -45,9 +45,9 @@
   </div>
 
   <!-- 中间内容 -->
-  <div class=" m-padded-tb-big">
+  <div class="m-padded-tb-big">
     <div class="ui container">
-      <div class="ui success message" th:unless="${#strings.isEmpty(message)}">
+      <div class="ui success message"  th:unless="${#strings.isEmpty(message)}">
         <i class="close icon"></i>
         <div class="header">提示:</div>
         <p th:text="${message}">操作成功</p>

@@ -132,16 +132,16 @@
                 contentType: false,
                 success: (res) => {
                     if (res.code === 0) {
-                        $('body').append($(`<div class="message">${res.data}</div>`))
+                        $('body').append($(`<div class="fileUpload-message">${res.data}</div>`))
                         setTimeout(() => {
-                            $('.message').remove();
+                            $('.fileUpload-message').remove();
                             $('.droppedImage').remove();
                         }, 1000)
                         file = null
                     } else {
-                        $('body').append($(`<div class="message">${res.data}</div>`))
+                        $('body').append($(`<div class="fileUpload-message">${res.data}</div>`))
                         setTimeout(() => {
-                            $('.message').remove();
+                            $('.fileUpload-message').remove();
                         }, 1000)
                     }
                 },
