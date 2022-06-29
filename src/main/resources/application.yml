@@ -6,3 +6,6 @@ spring:
 
 
 comment.avatar: /images/avatarTemp.jpg
+filePath: images
+server:
+  port: 9090

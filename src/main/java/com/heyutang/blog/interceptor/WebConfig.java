@@ -13,12 +13,16 @@ import java.util.List;
 public class WebConfig extends WebMvcConfigurationSupport {
     /**
      * 拦截器，将未登录时访问/admin路径的请求跳转到登录页面（/admin）
+     *
      * @param registry
      */
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
         registry.addInterceptor(new LoginInterceptor()).addPathPatterns("/admin/**")
-        .excludePathPatterns("/admin").excludePathPatterns("/admin/login");
+                .excludePathPatterns("/admin")
+                .excludePathPatterns("/admin/login")
+                .excludePathPatterns("/admin/getCode")
+                .excludePathPatterns("/admin/checkCode");
     }
 
     @Override
